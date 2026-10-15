@@ -1,0 +1,56 @@
+.hero-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  max-width: 1000px;
+  width: 100%;
+}
+
+.hero-title {
+  text-align: center;
+}
+
+.hero-description {
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+.hero-actions {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  width: 100%;
+}
+
+.hero-actions button {
+  flex: 1;
+}
+
+.features ul,
+.statistics ul {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  list-style: none;
+  padding: 0;
+}
+
+.feature-item {
+  padding: 2rem;
+  background: #e0e5ec;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow:
+    -8px -8px 16px #ffffff,
+    8px 8px 16px #a3b1c6;
+}
+
+.data-items {
+  padding: 2rem;
+  background-color: #e0e5ec;
+  border-radius: 20px;
+  box-shadow:
+    -4px -4px 8px #ffffff,
+    4px 4px 8px #a3b1c6;
+  list-style: none;
+}

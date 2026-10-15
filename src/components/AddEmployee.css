@@ -1,0 +1,76 @@
+.formInput {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.formItems {
+  width: 100%;
+  max-width: 420px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+
+  padding: 2rem;
+
+  background: #e0e5ec;
+  border-radius: 20px;
+
+  box-shadow:
+    -8px -8px 16px #ffffff,
+    8px 8px 16px #a3b1c6;
+}
+
+.formItems input,
+.formItems select {
+  width: 80%;
+  padding: 0.8rem 1rem;
+
+  border: none;
+  border-radius: 10px;
+  outline: none;
+
+  background: #e0e5ec;
+  color: #333;
+  font-size: 1rem;
+
+  box-shadow:
+    -4px -4px 8px #ffffff,
+    4px 4px 8px #a3b1c6;
+
+  transition: all 0.3s ease;
+}
+
+.formItems input::placeholder {
+  color: #777;
+}
+
+.formItems input:focus,
+.formItems select:focus {
+  background: #e6ebf2;
+  box-shadow:
+    inset -4px -4px 8px #ffffff,
+    inset 4px 4px 8px #a3b1c6;
+}
+
+.formItems button {
+  width: 80%;
+}
+
+.cancel-btn {
+  background: #e0e5ec;
+  color: #333;
+}
+
+.form-message {
+  min-height: 1.2rem;
+  font-size: 0.9rem;
+  color: #0b7a3b;
+}
+
+.formItems select:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
