@@ -71,3 +71,21 @@
   font-size: clamp(1rem, 5vh, 2rem);
   margin-top: 3rem;
 }
+
+/* ---------- Responsive ---------- */
+@media (max-width: 900px) {
+  .cards-wrapper {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .cards-wrapper {
+    gap: 1.2rem;
+  }
+
+  .card {
+    width: 100%;
+    padding: 1.2rem;
+  }
+}

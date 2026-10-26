@@ -56,3 +56,43 @@
     -4px -4px 8px #ffffff,
     4px 4px 8px #a3b1c6;
 }
+
+/* ---------- Responsive ---------- */
+
+/* tablet and below: horizontal nav under the header */
+@media (max-width: 900px) {
+  .navBar {
+    position: static;
+    width: auto;
+    height: auto;
+    margin: 0 1rem;
+    padding: 0.5rem;
+    flex-direction: row;
+  }
+
+  .navBar-card {
+    display: flex;
+    gap: 0.5rem;
+    width: 100%;
+    overflow-x: auto;
+  }
+
+  .navBar-items {
+    margin-bottom: 0;
+    padding: 0.7rem 1rem;
+    white-space: nowrap;
+    flex: 1;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .navBar {
+    margin: 0 0.75rem;
+  }
+
+  .navBar-items {
+    padding: 0.6rem 0.75rem;
+    font-size: 0.9rem;
+  }
+}

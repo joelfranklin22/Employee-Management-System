@@ -12,3 +12,24 @@
 
   padding: 2rem;
 }
+
+/* ---------- Responsive ---------- */
+
+/* tablet and below: sidebar becomes a horizontal bar under the header */
+@media (max-width: 900px) {
+  .main-content {
+    margin-top: 90px;
+  }
+
+  .pageContent {
+    margin-left: 0;
+    min-height: calc(100vh - 170px);
+    padding: 1.5rem 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .pageContent {
+    padding: 1rem 0.75rem;
+  }
+}

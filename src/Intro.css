@@ -54,3 +54,35 @@
     4px 4px 8px #a3b1c6;
   list-style: none;
 }
+
+/* ---------- Responsive ---------- */
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 1.6rem;
+  }
+
+  .hero-description {
+    font-size: 1rem;
+  }
+
+  .hero-actions {
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero-actions {
+    flex-direction: column;
+  }
+
+  .features ul,
+  .statistics ul {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .feature-item,
+  .data-items {
+    padding: 1.2rem;
+  }
+}
