@@ -1,71 +1,85 @@
 # Employee Management System
 
-A full-stack Employee Management System built using React, Node.js, Express.js, and MySQL. This application allows users to manage employee records efficiently through a web interface.
+A simple admin dashboard built with React to manage employee records.
+Add employees with their department, role and salary, then edit or delete them anytime.
+The home page shows live statistics.
+
+Live demo: <un netlify link></un>[staffdesk-dashboard.netlify.app](https://staffdesk-dashboard.netlify.app/)
 
 ## Features
 
-- View all employees
-- Add new employees
-- Update employee details
-- Delete employees
-- Responsive user interface
-- REST API integration
-- MySQL database connectivity
+- Add, view, edit and delete employees
+- Role list changes based on the selected department (IT, Sales or HR)
+- Live statistics: total employees, departments, active and not active
+- Form validation with messages
+- Confirmation before deleting an employee
+- Data is saved in the browser, so it stays after a refresh
+- Neumorphism style design
 
-## Tech Stack
+## Built with
 
-### Frontend
-- React.js
+- React
+- Vite
+- Context API and React Hooks (useState, useEffect)
 - CSS
+- Browser localStorage
+-
 
-### Backend
-- Node.js
-- MySQL2
-
-### Database
-- MySQL
-
----
-
-## Project Structure
+## Project structure
 
 ```
-employee-management-system
-│
-├── Frontend
-│   ├── src
-│   ├── public
-│   └── package.json
-│
-├── Backend
-│   ├── Backend.js
-│   ├── package.json
-│   └── node_modules
-│
+employee-management-system/
+├── src/
+│   ├── components/
+│   │   ├── AddEmployee.jsx, AddEmployee.css
+│   │   ├── EmployeeDetails.jsx, EmployeeDetails.css
+│   │   ├── Header.jsx, Header.css
+│   │   └── Navbar.jsx, Navbar.css
+│   ├── context/
+│   │   └── PageContext.jsx
+│   ├── App.jsx, App.css
+│   ├── Home.jsx
+│   ├── Intro.jsx, Intro.css
+│   ├── index.css
+│   └── main.jsx
+├── .gitignore
+├── eslint.config.js
+├── index.html
+├── package.json
+├── vite.config.js
 └── README.md
 ```
 
----
+## Run it yourself
 
+1. Clone the repo
+   ```
+   git clone https://github.com/<un-username>/employee-management-system.git
+   ```
+2. Go into the folder and install the packages
+   ```
+   cd employee-management-system
+   npm install
+   ```
+3. Start the app
+   ```
+   npm run dev
+   ```
+4. Open `http://localhost:5173` in your browser.
 
-## Future Enhancements
+## How it works
 
-- Employee Search
-- Pagination
-- Authentication & Authorization
-- Dashboard Analytics
-- Profile Images
-- Role Management
-- Export Data to Excel/PDF
+- `PageContext` stores the current page, the employee being edited and the statistics, so every component can use them.
+- Employees are saved in `localStorage` under the key `employee`.
+- When an employee is added, edited or deleted, an `employeesUpdated` event updates the list and the statistics.
 
----
+## What I learned
+
+- Sharing state between components with Context API
+- Building add, edit and delete features (CRUD) in React
+- Dependent dropdowns, where the role list depends on the department
+- Saving and reading data with localStorage
 
 ## Author
 
 Joel Franklin
-
----
-
-## License
-
-This project is for learning and educational purposes.
